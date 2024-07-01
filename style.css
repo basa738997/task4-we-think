@@ -1,0 +1,584 @@
+@font-face {
+    font-family: hell;
+    src: url(./helveticaneue.woff2);
+}
+@font-face {
+    font-family: hell-m;
+    src: url(./helveticaneue-medium.woff2);
+}
+@font-face {
+    font-family: i;
+    src: url(./l);
+}
+@font-face {
+    font-family: ii;
+    src: url(./l\ \(1\));
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+#loader{
+    width: 100vw;
+    height: 100vh;
+    background-color: #f2c77d;
+    position: absolute;
+    z-index: 999;
+    /* display: none; */
+}
+.imgpositioncenter{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    
+     
+}
+.lob{
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%,-50%);
+     width: 500px;
+     height: 500px;
+     background-color: #f2c77d;
+
+
+     /* opacity: 0; */
+     display: none;
+}
+#curser{
+    width: 60px ;
+    height: 60px;
+    background-color: wheat;
+    z-index: 99;
+    position: absolute;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    mix-blend-mode: difference;
+}
+#curser #errow{
+    font-size: 30px;
+    color: black;
+    display: none;
+}
+#main{
+    width: 100%;
+    background-color: black;
+}
+#nav{
+    width: 100%;
+    height: 100px;
+    top: 0;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 50px;
+    position: absolute;
+}
+#nav-part1{
+    width: 5%;
+    height: 60px;
+    background-color: #e7cfb1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#nav-part1 h4{
+    text-align: end;
+    color: black;
+    font-family: gilroy;
+    font-size: 19px;
+    line-height: 15px;
+}
+#nav-part2{
+    width: 45%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#nav-part2 h1{
+    font-size: 20px;
+    text-transform: capitalize;
+    font-family: inter;
+    color: #dac4a8;
+}
+#nav-part2 h1:hover{
+    color: blue;
+}
+#page1{
+    width: 100%;
+    min-height : 100vh;
+    background-color: black;
+    text-align: center;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    overflow: hidden;
+}
+#page1 h1{
+    font-size: 45vw;
+    font-family: i;
+    line-height: 80vh;
+    color: #f3c77c;
+}
+#page1 h2{
+    font-size: 3vw;
+    font-family: hell;
+    line-height: 8vh;
+    margin-top: 40px;
+    text-transform: uppercase;
+    color: #f3c77c;
+}
+#page2{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    position: relative;
+}
+#page2 video{
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+}
+#page3{
+    width: 100%;
+    height: 120vh;
+    background-color: black;
+    overflow: hidden;
+    padding: 120px 40px;
+    position: relative;
+}
+#page3 h1{
+    font-size: 13vw;
+    font-family: hell;
+    text-align: center;
+    line-height: 25vh;
+    color: #e7cfb1;
+}
+#page3 span{
+    font-family: ii;
+    color: #e7cfb1;
+}
+#p3text{
+    width: 20%;
+    height: 100px;
+    /* background-color: lightblue; */
+    position: absolute;
+    right: 2%;
+    bottom: 1%;
+    text-align: center;
+}
+#p3text h3{
+    text-align: start;
+    font-family: hell;
+    color: #e7cfb1;
+}
+#page4{
+    width: 100%;
+    min-height: 150vh;
+    background-color: black;
+    /* padding-top: 200px; */
+    position: relative;
+    padding: 200px 50px;
+}
+#page4 svg{
+    position: absolute;
+    right: 15%;
+    animation-name: round;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes round {
+    0%{
+        rotate:0deg
+    }
+    100%{
+        rotate:360deg
+    }
+}
+#p4left{
+    width: 50%;
+    height: 70vh;
+    /* background-color: red; */
+    margin-top: 100px;
+    position: relative;
+    transition: all ease 1s;
+}
+#p4left:hover{
+    scale: .9;
+}
+#p4left video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#p4left h4{
+    font-size: 1.1vw;
+    text-transform: uppercase;
+    font-family: inter;
+}
+#p4right{
+    width: 35%;
+    height: 60vh;
+    background-color: red;
+    margin-top: 100px;
+    position: absolute;
+    top: 45%;
+    right: 5%;
+    overflow: hidden;
+    transition: all ease 1s;
+}
+#p4right img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all ease 1s;
+}
+#p4right:hover img {
+    scale: 1.1;
+}
+#page4>h4{
+    font-size: 1.1vw;
+    text-transform: uppercase;
+    font-family: inter;
+    position: absolute;
+    right: 27.5%;
+    bottom: 0;
+}
+#page5{
+    width: 100%;
+    min-height: 150vh;
+    background-color: black;
+    padding: 100px 50px;
+    position: relative;
+}
+#p5left{
+    min-height: 35vh;
+    width: 35%;
+    overflow: hidden;
+    transition: all ease 1s;
+}
+#p5left img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all ease 1s;
+}
+#p5left img:hover{
+    scale: 1.1;
+}
+#p5left h1{
+    font-size: 1.1vw;
+    text-transform: uppercase;
+    font-family: hell;
+    line-height: 25px;
+}
+#p5right{
+    min-height: 45vh;
+    width: 45%;
+    position: absolute;
+    right: 5%;
+    bottom: 10%;
+    transition: all ease .5s;
+}
+#p5right:hover{
+    scale: .9;
+}
+#p5right img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#p5right h3{
+    font-size: 1.1vw;
+    text-transform: uppercase;
+    font-family: hell;
+    line-height: 25px;
+}
+#page6{
+    width: 100%;
+    height: 150vh;
+    background-color: black;
+    position: relative;
+}
+#page6 video:hover{
+    scale: .95;
+}
+#page6 video{
+    width: 60%;
+    height: 70%;
+    object-fit: cover;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    transition: all ease .5s;
+}
+#page6 h2{
+    font-size: 1.1vw;
+    text-transform: uppercase;
+    font-family: inter;
+    position: absolute;
+    left: 20%;
+    bottom: 22%;
+    line-height: 30px;
+}
+#p6text{
+    position: absolute;
+    bottom: 4%;
+    left: 50%;
+    transform: translate(-50%);
+    /* background-color: red; */
+    padding: 30px 80px;
+    border-radius: 50%;
+    border: 1px solid #dac4a8;
+    transition: all ease 1s;
+}
+#p6text h1{
+    font-size: 1.5vw;
+    text-transform: uppercase;
+    font-family: hell;
+    line-height: 25px;
+    color: #dac4a8;
+}
+
+#p6text:hover{
+    rotate: -5deg;
+}
+#page7{
+    width: 100%;
+    height: 120vh;
+    background-color: rgb(161, 218, 237);
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+}
+#page7::-webkit-scrollbar{
+    display: none;
+}
+#page7 h1{
+    font-size: 35vw;
+    font-family: hell;
+    text-transform: uppercase;
+    color: black;
+    padding: 100px 50px;
+    transition: all ease 1s;
+    position: absolute;
+}
+#page7 #p7i1{
+    position: absolute;
+    left: 39%;
+    top: 55%;
+    rotate: 10deg;
+}
+#page7 #p7i2{
+    position: absolute;
+    right: -11%;
+    top: 11%;
+    rotate: -5deg;
+}
+#page7 #p7i3{
+    position: absolute;
+    right: -72%;
+    top: 61%;
+    /* rotate: 5deg; */
+}
+#page8{
+    width: 100%;
+    height: 60vh;
+    background-color: rgb(161, 218, 237);
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+}
+#p8t1{
+    width: 25%;
+    height: 100%;
+    /* background-color: black; */
+}
+#p8t2{
+    width: 25%;
+    height: 100%;
+    /* background-color: black; */
+}
+#p8t3{
+    width: 25%;
+    height: 100%;
+    /* background-color: black; */
+}
+#p8t1 h1{
+    text-transform: uppercase;
+    font-family: hell;
+    font-size: 26px;
+    font-weight: 200;
+    line-height: 40px;
+    color: black;
+}
+#p8t2 h1{
+    text-transform: uppercase;
+    font-family: hell;
+    font-size: 26px;
+    font-weight: 200;
+    line-height: 40px;
+    color: black;
+}
+#p8t3 h1{
+    text-transform: uppercase;
+    font-family: hell;
+    font-size: 26px;
+    font-weight: 200;
+    line-height: 40px;
+    color: black;
+}
+#p8t1 h2{
+    text-transform: capitalize;
+    font-family: hell;
+    font-size: 22px;
+    font-weight: 100;
+    line-height: 30px;
+    color: black;
+}
+#p8t2 h2{
+    text-transform: capitalize;
+    font-family: hell;
+    font-size: 22px;
+    font-weight: 100;
+    line-height: 30px;
+    color: black;
+}
+#p8t3 h2{
+    text-transform: capitalize;
+    font-family: hell;
+    font-size: 22px;
+    font-weight: 100;
+    line-height: 30px;
+    color: black;
+}
+#page9{
+    width: 100%;
+    min-height: 100vh;
+    background-color: black;
+    padding: 100px 100px;
+}
+#ibox1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+#page10{
+    width: 100%;
+    min-height: 120vh;
+    background-color: #e7cfb1;
+    padding: 100px 100px;
+    position: relative;
+}
+.p10text1{
+    /* background-color: red; */
+    /* border-bottom: 5px solid black; */
+    position: relative;
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+}
+.p10text2{
+    overflow: hidden;
+    /* background-color: red; */
+    /* border-bottom: 5px solid black; */
+    position: relative;
+    width: 100%;
+    height: 100px
+}
+.p10text3{
+    overflow: hidden;
+    /* background-color: red; */
+    /* border-bottom: 5px solid black; */
+    position: relative;
+    width: 100%;
+    height: 100px
+
+}
+.p10text1 h1{
+    font-size: 80px;
+    color: black;
+    font-family: hell;
+    text-transform: uppercase;
+    font-weight: 400;
+    position: absolute;
+    left: 20%;
+}
+.p10text2 h1{
+    font-size: 80px;
+    color: black;
+    font-family: hell;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 400;
+    position: absolute;
+    left: 15%;
+}
+.p10text3 h1{
+    font-size: 80px;
+    color: black;
+    font-family: hell;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 400;
+    position: absolute;
+    left: 10%;
+}
+#page10 img{
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%);
+}
+#page11{
+    width: 100%;
+    height: 60vh;
+    background-color: black;
+    padding: 100px 50px;
+}
+#page11 h1{
+    font-size: 7vw;
+    font-family: hell;
+    color: #695f53;
+    text-transform: uppercase;
+}
+#page11 span{
+    font-size: 8vw;
+    font-family: hell;
+    color: #e7cfb1;
+}
+#p11i{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+#p11i p{
+    font-size: 1vw;
+    font-family: hell;
+}
+
+
+
+
+
